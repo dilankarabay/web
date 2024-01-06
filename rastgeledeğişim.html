@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+       
+        img {
+            display:block;
+            margin: 10px auto;
+       
+        }
+    </style>
+</head>
+<body>
+
+<p>Resim Gizleme</p>
+ <img src="kelebek1.jpg"  id="resim">
+        <br>
+        <button type="button" id="Gizle">Gizle</button>
+        <button type="button" onclick="resimgoster();">Göster</button>
+ 
+
+
+      
+   <p> Değişen Resimler</p>
+    <img id="randomImage" src="" alt="Rastgele Resim">
+
+    <script>
+    
+    var Gizle = document.querySelector("#Gizle");
+    var resim = document.querySelector("#resim"); 
+    
+    Gizle.addEventListener("click",resimGizle);
+    function resimGizle(){
+    resim.style.display="none";
+    }
+    
+    function resimgoster(){
+    resim.style.display= "block";
+    }
+           
+        var resimler = [
+            'resim1.jpg',
+            'resim2.jpg',
+            'resim3.jpg',
+            'resim4.jpg',
+            'resim5.jpg',
+            'resim6.jpg',
+            'resim7.jpg',
+            'resim8.jpg',
+            'resim9.jpg',
+            'resim10.jpg'
+        ];
+
+       
+        function rastgeleRenk() {
+            var r = Math.floor(Math.random() * 256);
+             var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+           
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+
+       
+        function rastgeleResimVeRenkGoster() {
+          
+            var randomIndex = Math.floor(Math.random() * resimler.length);
+            var randomImage = resimler[randomIndex];
+
+          
+            document.getElementById('randomImage').src = randomImage;
+
+            
+            document.body.style.backgroundColor = rastgeleRenk();
+        }
+
+        
+        window.onload = rastgeleResimVeRenkGoster;
+        
+       
+    </script>
+</body>
+</html>
