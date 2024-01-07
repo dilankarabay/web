@@ -5,8 +5,9 @@
  <title>DilanKARABAY</title>
 -</head>
 <body>
-<section class="duyuru">
+<section class="duyuru" id="duyuru">
   <div>
+  <a href="#duyuru">X</a>
   <img src="duyuru.jpg"/>
   <h4>Web siteme hoş geldiniz!</h4>
   
@@ -50,10 +51,29 @@ font-family: Copperplate, Papyrus, fantasy;
   section.duyuru div{
     background:white;
     padding:1em;
-   
+   position:relative;
   }
   section.duyuru div img{
     width:100%;
+  }
+  section.duyuru div a{
+    position:absolute;
+    top:-20px;
+    right:-20px;
+    display:block;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    text-decoration:none;
+    background:black;
+    color:white;
+    border-radius:20px;
+    font-weight:bolder;
+  }
+  section:target{
+    animation:none;
+    visibility:hidden;
   }
   
   @keyframes duyuruKapat{
