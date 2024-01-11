@@ -1,12 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h4{
+            color:purple;
+            text-align:center;
+        }
+        body{
+            background-color:lightgray;
+        }
+    </style>
+    <h4>JavaScript Test</h4>
     <script>
        
         function soru1() {
-            var cevap = prompt("1. Soru: JavaScript'te karşılaştırma operatörlerinden hangisi eşit değer ve aynı tip oparatördür?\n\na) ===\nb) ==\nc) !=\nd) !==");
+            var cevap = prompt("1. Soru: JavaScript'te karşılaştırma operatörlerinden hangisi eşit değer ve aynı tip tanımlı oparatördür?\n\na) ===\nb) ==\nc) !=\nd) !==");
             if (cevap.toLowerCase() === 'a') {
                 alert("Doğru!");
             } else {
@@ -15,7 +26,7 @@
         }
         
             function soru2() {
-            var cevap = prompt("1. Soru: JavaScript'te karşılaştırma operatörlerinden hangisi eşit değil oparatördür?\n\na) ===\nb) ==\nc) !=\nd) !==");
+            var cevap = prompt("2. Soru: JavaScript'te karşılaştırma operatörlerinden hangisi eşit değil tanımlı oparatördür?\n\na) ===\nb) ==\nc) !=\nd) !==");
             if (cevap.toLowerCase() === 'c') {
                 alert("Doğru!");
             } else {
@@ -25,11 +36,30 @@
         
         
             function soru3() {
-            var cevap = prompt("1. Soru: JavaScript'te karşılaştırma operatörlerinden >= ne anlama gelmektedir?\n\na) küçük veya eşit\nb) büyük\nc) küçük\nd) büyük veya eşit");
+            var cevap = prompt("3. Soru: JavaScript'te karşılaştırma operatörlerinden >= tanımı nedir?\n\na) küçük veya eşit\nb) büyük\nc) küçük\nd) büyük veya eşit");
             if (cevap.toLowerCase() === 'd') {
                 alert("Doğru!");
             } else {
                 alert("Yanlış! Doğru cevap d) büyük veya eşit");
+            }
+        }
+        
+          function soru4() {
+            var cevap = prompt("4. Soru: JavaScript'te bitişlem operatörlerinden & ne anlama gelmektedir?\n\na) OR\nb) NOT\nc) left shift\nd) AND");
+            if (cevap.toLowerCase() === 'd') {
+                alert("Doğru!");
+            } else {
+                alert("Yanlış! Doğru cevap d) AND");
+            }
+        }
+        
+        
+          function soru5() {
+            var cevap = prompt("5. Soru: JavaScript'te tanımı right shift olan bitişlem operatörü hangisidir?\n\na) &\nb) >>\nc) <<\nd) |");
+            if (cevap.toLowerCase() === 'b') {
+                alert("Doğru!");
+            } else {
+                alert("Yanlış! Doğru cevap b) >>");
             }
         }
         
@@ -40,6 +70,8 @@
    <li> <button onclick="soru1()">1. Soru</button>
      <li> <button onclick="soru2()">2. Soru</button>
     <li>  <button onclick="soru3()">3. Soru</button>
+     <li> <button onclick="soru4()">4. Soru</button>
+      <li> <button onclick="soru5()">5. Soru</button>
      </nav>
 </body>
 </html>
